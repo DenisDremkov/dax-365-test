@@ -1,0 +1,30 @@
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.dax365-btn {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  &-primary {
+    background-color: $color-primary;
+    color: #3A4035
+  }
+}
+
+.dax365-btn-icon {
+  padding: 5px;
+  cursor: pointer;
+
+  fa-icon {
+    color: #687075;
+  }
+}
+

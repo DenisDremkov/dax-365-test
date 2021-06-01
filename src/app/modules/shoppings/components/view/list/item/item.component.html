@@ -1,0 +1,23 @@
+<div class="inner-content dax365-flex-sb-c">
+  <div>
+    <div>{{data.categoryId}}</div>
+    <div>{{data.name}}</div>
+    <div>{{data.description}}</div>
+  </div>
+
+  <div>
+    <button 
+      type = "button" 
+      class="dax365-btn-icon" 
+      (click)="onEdit()">
+      <fa-icon [icon]="faEdit"></fa-icon>
+    </button>
+
+    <button 
+      type = "button" 
+      class="dax365-btn-icon" 
+      (click)="onDelete()">
+      <fa-icon [icon]="faTrash"></fa-icon>
+    </button>
+  </div>
+</div>

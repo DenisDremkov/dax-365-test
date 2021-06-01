@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'variables';
+@import 'mixins';
+@import './styles/elements/';
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+body {
+  background-color: $app-background;
+  color: $app-text-color;
+}
+
+// flex
+.dax365-flex-sa-c {
+  @include set_flex_sa_c;
+}
+.dax365-flex-c-c {
+  @include set_flex_c_c;
+}
+.dax365-flex-sb-c {
+  @include set_flex_sb_c;
+}
+.dax365-flex-fs-c {
+  @include set_flex_start_c;
+}
+.dax365-flex-fe-c {
+  @include set_flex_end_c;
+}
+.dax365-flex-column {
+  flex-direction: column;
+}

@@ -1,0 +1,51 @@
+
+// --------------------------------------- FLEX --------
+
+@mixin set_flex_c_c() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-content: center center;
+  box-sizing: border-box;
+}
+@mixin set_flex_sa_c() {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+@mixin set_flex_sb_c() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+@mixin set_flex_start_c() {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+@mixin set_flex_end_c() {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+// --------------------------------- POSITION (absolute, fixed) ---------------
+
+@mixin set_pos_fixed($top, $right, $bottom, $left) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin set_pos_absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

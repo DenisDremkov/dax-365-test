@@ -1,0 +1,11 @@
+// h1 {}
+// h2 {}
+// h3 {}
+
+.dax365-input-title {
+  color: #969CA1;
+  
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'variables';
+
+.dax365-input {
+  background-color: $input-bg-color;
+  border-radius: $input-border-radius;
+  color: $input-text-color;
+  padding: 8px 12px;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+    border: none;
+    outline: none;
+  }
+}

@@ -1,0 +1,12 @@
+@import 'variables';
+
+.ng-select.ng-select-single .ng-select-container {
+  background-color: $input-bg-color;
+  border-color: $input-bg-color;
+
+  .ng-value {
+    input {
+      color: $input-text-color;
+    }
+  }
+}

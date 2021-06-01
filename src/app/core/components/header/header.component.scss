@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+@import 'z-indexes';
+
+:host {
+  @include set_pos_fixed(0, 0, auto, 0);
+  background-color: $app-background-light;
+  height: $app-header-height;
+  z-index: $z-app-header;
+}

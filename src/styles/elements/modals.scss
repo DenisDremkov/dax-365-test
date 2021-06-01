@@ -1,0 +1,30 @@
+// ngx-bootstrap modals
+
+.modal-dialog {
+  border-radius: $modal-border-radius;;
+}
+
+.modal-content {
+  border: none;
+  border-radius: $modal-border-radius;
+}
+
+.modal-header {
+  border-radius: $modal-border-radius $modal-border-radius 0 0;
+  background-color: $modal-header-bg-color;
+  border-bottom-color: $modal-header-bg-color;
+}
+
+.modal-body {
+  background-color: $modal-body-bg-color;
+}
+
+.modal-footer {
+  background-color: $modal-footer-bg-color;
+  border-top-color: $modal-footer-bg-color;
+  border-radius: 0 0 $modal-border-radius $modal-border-radius;
+  
+  .dax365-btn {
+    flex-grow: 1;
+  }
+}

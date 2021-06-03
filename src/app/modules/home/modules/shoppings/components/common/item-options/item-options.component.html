@@ -1,0 +1,58 @@
+<div class="form-group">
+
+  <div class="dax365-input-title">category</div>
+
+  <ng-select 
+    [items]="categories$ | async" 
+    bindLabel="name" 
+    bindValue="id" 
+    [formControl] = "categoryFormCtrl">
+  </ng-select>
+
+  <dax365-error-message
+    *ngIf="categoryFormCtrl.invalid && (isSubmitted || categoryFormCtrl.dirty)"
+    [showRequiredError] = "categoryFormCtrl.errors.required">
+  </dax365-error-message>
+</div>
+
+<div class="form-group">
+
+  <div class="dax365-input-title">name</div>
+
+  <input 
+    type="text" 
+    placeholder="name" 
+    class  = "dax365-input"
+    [formControl]="nameFormCtrl">
+
+  <dax365-error-message
+    *ngIf="nameFormCtrl.invalid && (isSubmitted || nameFormCtrl.dirty)"
+    [showRequiredError] = "nameFormCtrl.errors.required"
+    [minLength]="nameMinLength"
+    [showMinLengthError] = "nameFormCtrl.errors.minlength"
+    [maxLength]="nameMaxLength"
+    [showMaxLengthError] = "nameFormCtrl.errors.maxlength">
+  </dax365-error-message>
+</div>
+
+<div class="form-group">
+
+  <div class="dax365-input-title">description</div>
+
+  <textarea 
+    rows="4"
+    type="text" 
+    placeholder="description" 
+    class  = "dax365-input"
+    [formControl]="descripFormCtrl">
+  </textarea>
+
+  <dax365-error-message
+    *ngIf="descripFormCtrl.invalid && (isSubmitted || descripFormCtrl.dirty)"
+    [showRequiredError] = "descripFormCtrl.errors.required"
+    [minLength]="descriptMinLength"
+    [showMinLengthError] = "descripFormCtrl.errors.minlength"
+    [maxLength]="descriptMaxLength"
+    [showMaxLengthError] = "descripFormCtrl.errors.maxlength">
+  </dax365-error-message>
+</div>

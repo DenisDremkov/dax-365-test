@@ -1,27 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
+import { AuthGuard } from './core/guards/auth.guard';
+import { NotAuthGuard } from './core/guards/not-auth.guard';
+import { E_ROUTE_NAMES } from './core/services/core-router.service';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'shoppings',
+    redirectTo: E_ROUTE_NAMES.HOME,
     pathMatch: 'full',
   },
   {
-    path: 'shoppings',
-    // canActivate: [AuthGuard],
+    path: E_ROUTE_NAMES.HOME,
+    canLoad: [AuthGuard],
     loadChildren: () =>
-      import('./modules/shoppings/shoppings.module').then(m => m.ShoppingsModule),
+      import('./modules/home/home.module').then(m => m.HomeModule),
   },
   {
-    path: 'auth',
+    path: E_ROUTE_NAMES.GUEST,
+    canLoad: [NotAuthGuard],
     loadChildren: () =>
-      import('./modules/auth/auth.module').then(m => m.AuthModule),
+      import('./modules/guest/guest.module').then(m => m.GuestModule),
   },
 
-  { path: '**', redirectTo: '/404' },
-  { path: '404', component:  PageNotFoundComponent},
+  { path: '**', redirectTo: '/' + E_ROUTE_NAMES.NOT_FOUND },
+  { path: E_ROUTE_NAMES.NOT_FOUND, component:  PageNotFoundComponent},
 ];
 
 @NgModule({

@@ -1,0 +1,12 @@
+@import 'variables';
+
+// a {}
+
+.dax365-link {
+  color: $color-primary;
+  cursor: pointer;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

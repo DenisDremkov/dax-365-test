@@ -1,0 +1,11 @@
+<ng-container *ngIf="items$ | async as items">
+  
+  <p *ngIf="items.length === 0" class = "dax365-flex-c-c">No items</p>
+  
+  <dax365-shopping-item 
+    *ngFor="let item of items$ | async"
+    [data]="item">
+  </dax365-shopping-item>
+</ng-container>
+
+

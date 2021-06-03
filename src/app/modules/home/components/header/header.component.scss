@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'mixins';
+@import 'z-indexes';
+
+:host {
+  @include set_pos_fixed(0, 0, auto, 0);
+  
+  padding: 0px 30px;
+  background-color: $app-background-light;
+  height: $app-header-height;
+  z-index: $z-app-header;
+}
+
+:host ::ng-deep dax365-logo {
+  margin-right: 30px;
+  b {
+    margin-right: 10px;
+  }
+}
+
+.username {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+dax365-logout {
+  span {
+    color: #fff;
+  }
+}

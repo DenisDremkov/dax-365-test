@@ -1,0 +1,22 @@
+<dax365-modal-header 
+  [title]="'Edit item'" 
+  (close)="close.emit()">
+</dax365-modal-header>
+
+<div class="modal-body">
+  <dax365-shopping-item-options 
+    [data]="data"
+    [formGroup] = "form"
+    (changed)="changed($event)">
+  </dax365-shopping-item-options>
+</div>
+
+<div class = "modal-footer">
+  <button 
+    type = "button"
+    class = "dax365-btn dax365-btn-primary"
+    [disabled]="inProgress || isNotChanged"
+    (click)="update()">
+    update
+  </button>
+</div>

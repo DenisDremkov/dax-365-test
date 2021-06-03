@@ -1,0 +1,70 @@
+<div class="dax365-auth-container">
+
+  <div class="dax365-flex-c-c">
+    <dax365-logo></dax365-logo>
+  </div>
+
+  <div class="dax365-auth-container__content">
+
+    <h2>Welcome back</h2>
+
+    <form [formGroup]="formGroup">
+      
+      <div class="form-group">
+        
+        <div class="dax365-input-title">email</div>
+
+        <input 
+          type="email" 
+          placeholder="email" 
+          class  = "dax365-input"
+          formControlName="email">
+
+        <dax365-error-message
+          *ngIf="
+            formGroup.controls.email.invalid && 
+            (isSubmitted || formGroup.controls.email.dirty)
+          "
+          [showRequiredError] = "formGroup.controls.email.errors.required"
+          [showEmailPatternError] = "formGroup.controls.email.errors.email">
+        </dax365-error-message>
+      </div>
+      
+      <div class="form-group">
+        
+        <div class="dax365-input-title">password</div>
+        
+        <input 
+          type="text" 
+          placeholder="password" 
+          formControlName="password"
+          class  = "dax365-input">
+
+        <dax365-error-message
+          *ngIf="
+            formGroup.controls.password.invalid && 
+            (isSubmitted || formGroup.controls.password.dirty)
+          "
+          [showRequiredError] = "formGroup.controls.password.errors.required">
+        </dax365-error-message>
+      </div>
+    </form>
+
+    <footer class="dax365-flex-c-c dax365-flex-column">
+
+      <button 
+        type = "button"
+        class = "dax365-btn dax365-btn-primary"
+        [disabled]="inProgress"
+        (click)="login()">
+        login
+      </button>
+
+      <button 
+        class="dax365-link" 
+        (click)="goToRegistration()">
+        go to registration
+      </button>
+    </footer>
+  </div>
+</div>

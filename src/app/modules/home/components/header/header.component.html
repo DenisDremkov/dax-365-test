@@ -1,0 +1,17 @@
+<div class="dax365-flex-sb-c">
+  <a [routerLink]="APP_ROUTES.DEFAULT"><dax365-logo></dax365-logo></a>
+  <h5>Shopping list</h5>
+</div>
+
+<div class="dax365-flex-sb-c">
+  
+  <span 
+    class="username" 
+    *ngIf="authUserProfile$ | async as profile">
+    "{{profile.fullName}}"
+  </span>
+  
+  <dax365-logout *ngIf="isAuthenticated$ | async">
+    <span>logout</span>
+  </dax365-logout>
+</div>

@@ -1,21 +1,39 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
+
+import { NgxSpinnerModule } from "ngx-spinner";
+
+import { SharedModule } from '../shared/shared.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { CoreStateService } from './services/core-state.service';
+import { AuthGuard } from './guards/auth.guard';
+import { IsProfileCompletedGuard } from './guards/is-profile-completed.guard';
+import { IsProfileNotCompletedGuard } from './guards/is-profile-not-completed.guard';
+import { NotAuthGuard } from './guards/not-auth.guard';
+import { CoreHttpService } from './services/core-http.service';
+import { CoreRouterService } from './services/core-router.service';
+import { AuthUserStateService } from './services/auth-user-state.service';
 
 @NgModule({
   imports: [
-  ],
+    CommonModule,
+    RouterModule,
+    SharedModule,
 
-  declarations: [
-    HeaderComponent,
-    PageNotFoundComponent
+    // libs
+    NgxSpinnerModule
   ],
-  exports: [
-    HeaderComponent
+  declarations: [
+    PageNotFoundComponent,
   ],
   providers: [
-    CoreStateService
+    AuthGuard,
+    NotAuthGuard,
+    IsProfileCompletedGuard,
+    IsProfileNotCompletedGuard,
+    AuthUserStateService,
+    CoreRouterService,
+    CoreHttpService,
   ]
 })
 export class CoreModule {}

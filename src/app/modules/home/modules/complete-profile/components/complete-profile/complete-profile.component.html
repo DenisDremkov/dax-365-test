@@ -1,0 +1,60 @@
+<div class="dax365-auth-container">
+
+  <div class="dax365-flex-c-c">
+    <dax365-logo></dax365-logo>
+  </div>
+
+  <div class="dax365-auth-container__content">
+
+    <h2>Complete profile</h2>
+
+    <form [formGroup]="formGroup">
+      
+      <div class="form-group">
+
+        <div class="dax365-input-title">first name</div>
+
+        <input 
+          type="text" 
+          placeholder="first name" 
+          class  = "dax365-input"
+          formControlName="firstName">
+
+        <dax365-error-message
+          *ngIf="formGroup.controls.firstName.invalid && (isSubmitted || formGroup.controls.firstName.dirty)"
+          [showRequiredError] = "formGroup.controls.firstName.errors.required">
+        </dax365-error-message>
+      </div>
+      
+      <div class="form-group">
+
+        <div class="dax365-input-title">last name</div>
+        
+        <input 
+          rows="4"
+          type="text" 
+          placeholder="last name" 
+          formControlName="lastName"
+          class  = "dax365-input">
+
+        <dax365-error-message
+          *ngIf="formGroup.controls.lastName.invalid && (isSubmitted || formGroup.controls.lastName.dirty)"
+          [showRequiredError] = "formGroup.controls.lastName.errors.required">
+        </dax365-error-message>
+      </div>
+    </form>
+
+    <footer class="dax365-flex-c-c dax365-flex-column">
+
+      <dax365-logout><span class = "dax365-link">login with other credentials</span></dax365-logout>
+
+      <button 
+        type = "button"
+        class = "dax365-btn dax365-btn-primary"
+        [disabled] = "inProgress"
+        (click)="next()">
+        next
+      </button>
+    </footer>
+  </div>
+</div>

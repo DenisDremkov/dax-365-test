@@ -29,11 +29,13 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/styles/config"
+                "src/styles/config",
+                "src/styles/contexts"
               ]
             },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },

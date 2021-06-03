@@ -1,0 +1,31 @@
+<button 
+  type="button" 
+  class="dax365-btn dax365-btn-primary" 
+  (click)="openModal(template)">
+  add item
+</button>
+ 
+<ng-template #template>
+  <dax365-modal-header 
+    [title]="'Add item'" 
+    (close)="modalRef.hide()">
+  </dax365-modal-header>
+
+  <div class="modal-body">
+    <dax365-shopping-item-options 
+      [formGroup] = "form"
+      [isSubmitted] = "isSubmitted"
+      (changed)="changed($event)">
+    </dax365-shopping-item-options>
+  </div>
+
+  <div class = "modal-footer">
+    <button 
+      type = "button"
+      class = "dax365-btn dax365-btn-primary"
+      [disabled]="inProgress"
+      (click)="addItem()">
+      save
+    </button>
+  </div>
+</ng-template>

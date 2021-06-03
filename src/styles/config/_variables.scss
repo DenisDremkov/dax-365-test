@@ -1,5 +1,6 @@
 // main colors
 $color-primary: #ECCA30;
+$color-danger: #F03B31;
 $app-background: #162029;
 $app-background-light: #232D36;
 $app-text-color: #6E747A;
@@ -11,7 +12,8 @@ $app-content-max-width: 720px;
 // inputs 
 $input-bg-color: #36414B;
 $input-border-radius: 4px;
-$input-text-color: #80878D;
+$input-text-color: #fff;
+$input-placeholder-color: #80878D;
 
 // modals
 $modal-header-bg-color: #29333C;

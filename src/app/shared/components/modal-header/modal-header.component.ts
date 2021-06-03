@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'dax365-modal-header',
@@ -7,6 +6,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./modal-header.component.scss']
 })
 export class ModalHeaderComponent {
-  @Input() modalRef: BsModalRef;
+  
   @Input() title: string;
+
+  @Output() close = new EventEmitter<void>();
 }

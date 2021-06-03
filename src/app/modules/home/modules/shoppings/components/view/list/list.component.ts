@@ -27,7 +27,7 @@ export class ShoppingListComponent implements OnInit {
       .pipe(
         map(list => {
           return list 
-            ? list.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            ? list.sort((a,b) => b.date - a.date)
             : null
         })
       );

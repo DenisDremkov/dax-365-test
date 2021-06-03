@@ -6,3 +6,6 @@ export * from "./complete-profile/";
 
 // shoppings
 export * from "./shoppings/";
+
+// scheduler
+export * from "./scheduler";

@@ -19,6 +19,6 @@ export const addItem = functions.https.onCall((data: AddItemPayload, context) =>
     description: data.description,
     categoryId: data.categoryId,
     ownerUid: context.auth.uid,
-    date: new Date().toUTCString(),
+    date: new Date().getTime(),
   });
 });

@@ -11,7 +11,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/dax365",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

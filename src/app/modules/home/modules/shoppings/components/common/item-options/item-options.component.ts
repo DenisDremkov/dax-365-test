@@ -61,7 +61,7 @@ export class ShoppingItemOptionsComponent implements OnInit, OnDestroy {
   }
 
   submit(): void {
-    continue here - pass event submit for click button in parent comp
+    // continue here - pass event submit for click button in parent comp
   }
 
   private _createNameFormControl(formGroup: FormGroup, data?: IShoppingItem): FormControl {

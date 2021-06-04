@@ -30,12 +30,19 @@
       
       <div class="form-group">
         <div class="dax365-input-title">password</div>
-        <input 
-          rows="4"
-          type="text" 
-          placeholder="password" 
-          formControlName="password"
-          class  = "dax365-input">
+
+        <dax365-password-wrapper
+          [isVisible] = "isPasswVisisble"
+          (togglePasswVisibility) = "isPasswVisisble = !isPasswVisisble">
+
+          <input 
+            type="{{isPasswVisisble ? 'text' : 'password'}}" 
+            placeholder="password" 
+            formControlName="password"
+            class  = "dax365-input"
+            (keyup.enter) ="registr()">
+        </dax365-password-wrapper>
+
         <dax365-error-message
           *ngIf="
             formGroup.controls.password.invalid && 

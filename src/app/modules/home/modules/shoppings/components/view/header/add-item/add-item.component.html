@@ -15,6 +15,7 @@
     <dax365-shopping-item-options 
       [formGroup] = "form"
       [isSubmitted] = "isSubmitted"
+      (submit)="addItem()"
       (changed)="changed($event)">
     </dax365-shopping-item-options>
   </div>

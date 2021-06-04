@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from 'src/app/shared/shared.module';
+import { GuestSharedModule } from '../../shared/guest-shared.module';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { RegistrationRoutingModule } from './registration.routes';
 
@@ -16,6 +17,7 @@ import { RegistrationRoutingModule } from './registration.routes';
     // app
     RegistrationRoutingModule,
     SharedModule,
+    GuestSharedModule
   ],
 
   declarations: [

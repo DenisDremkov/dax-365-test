@@ -31,6 +31,7 @@ export class ShoppingItemOptionsComponent implements OnInit, OnDestroy {
   public categories$: Observable<Array<IShoppingCategory>>;
 
   @Output() changed = new EventEmitter<IShoppingItem>();
+  @Output() submit = new EventEmitter<void>();
 
   constructor(
     private _shoppingsStateService: ShoppingsStateService
@@ -58,10 +59,6 @@ export class ShoppingItemOptionsComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this._destroy$.next();
     this._destroy$.complete();
-  }
-
-  submit(): void {
-    // continue here - pass event submit for click button in parent comp
   }
 
   private _createNameFormControl(formGroup: FormGroup, data?: IShoppingItem): FormControl {

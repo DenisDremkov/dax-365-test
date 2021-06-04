@@ -19,6 +19,7 @@ export class RegistrationComponent implements OnInit {
   public formGroup: FormGroup;
   public isSubmitted: boolean;
   public inProgress = false;
+  public isPasswVisisble = false;
 
   constructor(
     private _toastrService: ToastrService,
@@ -29,8 +30,8 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = new FormGroup({
-      email: new FormControl('1@gmail.com', [Validators.required, Validators.email]),
-      password: new FormControl('Qwerty123!', [Validators.required])
+      email: new FormControl(undefined, [Validators.required, Validators.email]),
+      password: new FormControl(undefined, [Validators.required])
     });
   }
 

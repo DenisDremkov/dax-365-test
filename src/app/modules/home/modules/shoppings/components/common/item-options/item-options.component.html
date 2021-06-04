@@ -23,7 +23,7 @@
     type="text" 
     placeholder="name" 
     class  = "dax365-input"
-    (keyup.enter)="submit()"
+    (keyup.enter)="submit?.emit()"
     [formControl]="nameFormCtrl">
 
   <dax365-error-message
@@ -44,7 +44,7 @@
     rows="4"
     type="text" 
     placeholder="description" 
-    (keyup.enter) ="submit()"
+    (keyup.enter) ="submit?.emit()"
     class  = "dax365-input"
     [formControl]="descripFormCtrl">
   </textarea>

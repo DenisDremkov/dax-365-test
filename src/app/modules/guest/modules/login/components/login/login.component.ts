@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   public formGroup: FormGroup;
   public isSubmitted: boolean;
   public inProgress = false;
+  public isPasswVisisble = false;
   
   constructor(
     private _toastrService: ToastrService,
@@ -32,14 +33,14 @@ export class LoginComponent implements OnInit {
   }
 
   private _initForm(): void {
-    const email = new FormControl('test1@gmail.com', [Validators.required, Validators.email]);
+    const email = new FormControl(undefined, [Validators.required, Validators.email]);
     email.valueChanges.subscribe(res => {
       if (typeof res !== 'undefined' && res !== null && res.trim() === '') {
         email.setValue(undefined);
       }
     })
 
-    const password = new FormControl('Qwerty123!', [Validators.required]);
+    const password = new FormControl(undefined, [Validators.required]);
     password.valueChanges.subscribe(res => {
       if (typeof res !== 'undefined' && res !== null && res.trim() === '') {
         password.setValue(undefined);

@@ -7,6 +7,7 @@
   <dax365-shopping-item-options 
     [data]="data"
     [formGroup] = "form"
+    (submit)="update()"
     (changed)="changed($event)">
   </dax365-shopping-item-options>
 </div>

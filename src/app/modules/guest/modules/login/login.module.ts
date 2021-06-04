@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { SharedModule } from 'src/app/shared/shared.module';
+import { GuestSharedModule } from '../../shared/guest-shared.module';
 import { LoginComponent } from './components/login/login.component';
 import { LoginRoutingModule } from './login.routes';
 
@@ -18,6 +19,7 @@ import { LoginRoutingModule } from './login.routes';
     // app
     LoginRoutingModule,
     SharedModule,
+    GuestSharedModule,
   ],
 
   declarations: [

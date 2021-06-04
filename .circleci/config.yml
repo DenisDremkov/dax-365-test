@@ -3,7 +3,7 @@ jobs:
     build:
         docker:
             - image: circleci/node:14.16.0
-        working_directory: ~/repo
+        working_directory: ~/dist/dax365
         steps:
             - checkout
             # Download and cache dependencies

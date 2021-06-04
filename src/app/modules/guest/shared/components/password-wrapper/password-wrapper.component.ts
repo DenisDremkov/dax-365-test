@@ -9,7 +9,8 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 export class PasswordWrapperComponent {
 
-  @Input() isVisible: boolean;
+  @Input() isPasswVisible: boolean;
+  @Input() isToggleBtnVisible: boolean;
   
   public faEye = faEye;
   public faEyeSlash = faEyeSlash;
@@ -17,7 +18,6 @@ export class PasswordWrapperComponent {
   @Output() togglePasswVisibility = new EventEmitter<void>();
 
   action(ev): void {
-    console.error(ev)
     this.togglePasswVisibility?.emit()
   }
 }

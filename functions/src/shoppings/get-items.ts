@@ -12,7 +12,6 @@ export const getItems = functions.https.onCall(async (data: RequestParams, conte
         "only authenticated users can get items"
     );
   }
-  console.log("!!!!!", data.categoryId);
   const request = admin
       .firestore()
       .collection("items")

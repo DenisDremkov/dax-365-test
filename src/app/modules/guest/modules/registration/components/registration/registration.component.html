@@ -32,7 +32,8 @@
         <div class="dax365-input-title">password</div>
 
         <dax365-password-wrapper
-          [isVisible] = "isPasswVisisble"
+          [isPasswVisible] = "isPasswVisisble"
+          [isToggleBtnVisible] = "formGroup?.controls?.password?.value"
           (togglePasswVisibility) = "isPasswVisisble = !isPasswVisisble">
 
           <input 

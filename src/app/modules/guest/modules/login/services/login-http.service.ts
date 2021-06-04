@@ -17,13 +17,10 @@ export class LoginHttpService {
       this.afAuth
         .setPersistence(firebase.auth.Auth.Persistence.SESSION)
         .then(() => {
-          // this.afAuth.app.
           this.afAuth.signInWithEmailAndPassword(data.email, data.password)
             .then(res => {
-              // res.user.sdfg
               obs.next(res);
               obs.complete();
-              // console.log(res);
             })
             .catch(err => {
               obs.error(err);

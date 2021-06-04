@@ -60,6 +60,10 @@ export class ShoppingItemOptionsComponent implements OnInit, OnDestroy {
     this._destroy$.complete();
   }
 
+  submit(): void {
+    continue here - pass event submit for click button in parent comp
+  }
+
   private _createNameFormControl(formGroup: FormGroup, data?: IShoppingItem): FormControl {
     const fc = new FormControl(data?.name, [
       Validators.required,
